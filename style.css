@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.home {
+  background-image: url("https://images.pexels.com/photos/4256852/pexels-photo-4256852.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+header {
+  padding: 1em;
+  padding-left: 0.6em;
+  font-size: 1.6rem;
+  color: #d00000;
+  font-family: "Poppins", "sans-serif";
+}
+.fa-book-open {
+  float: left;
+  padding-top: 0.4em;
+  font-size: 2.1rem;
+  padding-right: 0.3em;
+}
+.successPopup {
+  font-size: 18px;
+  border: 1px solid green;
+  text-align: center;
+  position: absolute;
+  background-attachment: scroll;
+  padding: 0.8em;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", "sans-serif";
+  background-color: #0081a7;
+  color: #fff;
+  display: none;
+  animation: fadeInAnimation linear 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.brandLine,
+.btn-add {
+  color: rgba(247, 230, 204, 0.89);
+  font-family: "Roboto", "sans-serif";
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+.brandLine {
+  margin: 6em 0.5em 0.7em 1em;
+}
+.btn-add {
+  border: 2px solid blanchedalmond;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7em;
+  padding: 0.2em;
+}
+.btn-add:hover {
+  cursor: pointer;
+  transform: scaleX(1.2);
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-out;
+}
+.yourBooks {
+  background-color: #e5e5e5 !important;
+  background-color: #e9d8a6;
+  display: flex;
+  flex-direction: column;
+}
+.yourBooks h2 {
+  font-family: "Roboto", "sans-serif";
+  margin: 1em auto;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #d00000;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #d00000;
+}
+.yourBooks h2:hover {
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+  padding: 1em;
+  border-radius: 5px;
+  width: 70%;
+  font-family: "Source Sans Pro", sans-serif;
+  background: #485563;
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563) !important;
+}
+.cardContent {
+  line-height: 30px;
+}
+.title {
+  color: rgb(7, 212, 151);
+  font-size: 1.4rem;
+  margin-bottom: 0.8em;
+}
+.title:hover {
+  cursor: pointer;
+}
+span {
+  padding-right: 15px;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.div {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f32160;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(47px);
+  transform: translateX(47px);
+}
+input:focus {
+  outline: none;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.remove {
+  font-size: 1.1rem;
+  width: 8em;
+  padding: 0.3em;
+  border-radius: 5px;
+  border: none;
+  background-color: oldlace;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1em;
+}
+.remove:hover {
+  background-color: rgb(250, 213, 158);
+  transition: background-color 2s;
+}
+form {
+  background-color: rgb(7, 7, 7);
+  position: absolute;
+  display: none;
+  background-attachment: scroll;
+  padding: 0.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close {
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: rgb(20, 161, 103);
+}
+.close:hover {
+  color: red;
+  transition: 0.3s ease;
+}
+input {
+  display: block;
+  outline: 0;
+  border-width: 0 0 1px;
+  background-color: rgb(7, 7, 7);
+  color: rgb(20, 161, 103);
+  border-color: #ccc;
+  margin: 1.5rem;
+  font-size: 1rem;
+}
+input:hover {
+  cursor: pointer;
+}
+::placeholder {
+  color: #eee;
+  opacity: 1;
+}
+::-ms-input-placeholder {
+  color: #eee;
+}
+
+.submit {
+  color: #111;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  background-color: rgb(20, 161, 103);
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 8em;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 400px) {
+  header {
+    padding-left: 1.5em;
+  }
+  .yourBooks h2 {
+    font-size: 2rem;
+  }
+  .card {
+    margin: 35px auto;
+    width: 60%;
+  }
+  .cardContent {
+    line-height: 33px;
+  }
+  .remove {
+    width: 10em;
+    padding: 0.5em;
+  }
+  form {
+    padding: 1.5rem;
+  }
+  input {
+    margin: 2rem;
+  }
+}
+@media only screen and (min-width: 568px) {
+  header {
+    font-size: 2rem;
+  }
+  .fa-book-open {
+    padding-top: 0.44em;
+    font-size: 2.5rem;
+  }
+  /*
+  .brandLine {
+    margin-top: 5em;
+  }*/
+  .card {
+    width: 60%;
+  }
+  .remove {
+    width: 12em;
+  }
+  form {
+    padding: 2em;
+  }
+  .close {
+    font-size: 3rem;
+  }
+
+  input {
+    margin: 2.5rem;
+  }
+  .submit {
+    padding: 0.6em;
+    width: 10em;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .fa-book-open {
+    padding-top: 0.45em;
+  }
+  .card {
+    width: 40%;
+  }
+  .yourBooks h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .yourBooks h2 {
+    font-weight: 900;
+  }
+  .bookContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10em;
+    margin-top: 0;
+  }
+  .card {
+    width: 50vmin;
+    height: 70vh;
+    padding: 1em;
+    margin: 40px auto;
+  }
+  .remove {
+    width: 13em;
+    margin-bottom: 1em;
+  }
+}
